@@ -1,0 +1,62 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (31.7ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "emails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "from" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (3.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204040652')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mEmail Create (0.6ms)[0m   [0;1mINSERT INTO "emails" ("updated_at", "body", "from", "subject", "created_at") VALUES('2009-02-04 04:08:30', 'and this is the body
+
+and this is the body
+
+--000325563a32a4f55b04620fed2a--', '--- 
+- !ruby/object:TMail::Address 
+ domain: 
+ - gmail
+ - com
+ local: 
+ - supporttrackr
+ name: Support Test
+ routes: []
+
+', 'This is the subject', '2009-02-04 04:08:30')[0m
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("updated_at", "body", "from", "subject", "created_at") VALUES('2009-02-04 04:16:44', 'body
+
+body
+
+--0003255646ceff1d380462100af3--', '--- 
+- supporttrackr@gmail.com
+', 'subject', '2009-02-04 04:16:44')[0m
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("updated_at", "body", "from", "subject", "created_at") VALUES('2009-02-04 04:18:02', 'body
+
+body
+
+--000e0cd28d7a76c8d00462100fc5--', '--- 
+- supporttrackr@gmail.com
+', 'test', '2009-02-04 04:18:02')[0m
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY emails.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" LIMIT 1[0m
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("updated_at", "body", "from", "subject", "created_at") VALUES('2009-02-04 04:35:13', 'one
+
+--0016368e2494eb3e7c0462104c88--', '--- 
+- supporttrackr@gmail.com
+', 'last', '2009-02-04 04:35:13')[0m

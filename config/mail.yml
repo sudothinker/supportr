@@ -1,0 +1,21 @@
+development:
+  type: IMAP
+  server: IMAP.gmail.com
+  port: 993
+  ssl: yes
+  use_login: yes
+  processed_folder: processed
+  username: supporttrackr@gmail.com
+  password: supportr
+  
+test:
+  type: pop
+  server: localhost
+  username: username
+  password: password
+  
+production:
+  type: pop
+  server: localhost
+  username: username
+  password: password
