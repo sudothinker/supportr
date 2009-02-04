@@ -19,6 +19,15 @@
           </div>
           <div class="item">                
             <p><%= display_email(email) %></p>
+            
+            <%= link_to_function("Reply", "$('#email_#{email.id}').toggle()") %>
+            <div id="email_<%= email.id %>" style="display:none">
+              <% form_for email do |f| %>
+                <%= f.hidden_field :event, :value => "reply" %>
+                <%= f.text_area :reply %>
+                <%= submit_tag "Reply" %>
+              <% end %>
+            </div>
           </div>              
         </li>    
         <% end %>     

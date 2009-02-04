@@ -1,5 +1,5 @@
-<%= email.friendly_from %>: <%= email.from %>
+<%= email.parsed.friendly_from %>: <%= email.parsed.from %>
 <hr />
-<%= email.subject %>
+<%= email.parsed.subject %>
 <hr />
 <%= RedCloth.new(email.body).to_html %>

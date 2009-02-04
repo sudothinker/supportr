@@ -2,7 +2,7 @@ class Email < ActiveRecord::Base
   is_archived
   belongs_to :response
     
-  attr_accessor :events
+  attr_accessor :events, :reply
   after_save :process_events
   
   def process_events

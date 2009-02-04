@@ -3109,3 +3109,111 @@ Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:46:09) [GET]
 Rendering template within layouts/application
 Rendering emails/index
 Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+Received email: 29
+  [4;35;1mEmail Create (0.6ms)[0m   [0mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186956wfg;
+ Wed, 4 Feb 2009 12:48:29 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.214.11 with SMTP id m11mr358843wfg.279.1233780509250; Wed, 
+	04 Feb 2009 12:48:29 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:48:29 -0800
+Message-ID: <90d894590902041248w6f961231le22603815ae6d8b9@mail.gmail.com>
+Subject: Wassup
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd2e61cfc137d04621de871
+
+--000e0cd2e61cfc137d04621de871
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+trackr
+
+--000e0cd2e61cfc137d04621de871
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+trackr
+
+--000e0cd2e61cfc137d04621de871--', '2009-02-04 20:48:51', NULL, 29, '2009-02-04 20:48:51')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:51:05) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (3.6ms)
+Completed in 201ms (View: 191, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:52:17) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.4ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.1ms)
+Completed in 97ms (View: 89, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:53:22) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.6ms)
+Completed in 64ms (View: 57, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:53:33) [PUT]
+  Parameters: {"commit"=>"Reply", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"7", "email"=>{"reply"=>"*this is* what you do.\r\n\r\nJust fix it", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 7) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:53:33 -0800
+To: michael@howcast.com
+Subject: Re: Wassup
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>this is</strong> what you do.</p>
+<p>Just fix it</p>
+
+On Wed, Feb 04, 2009 at 08:48PM, Michael Murray <michael@howcast.com> wrote:
+<p>trackr</p>
+  [4;35;1mEmail::Archive Create (0.6ms)[0m   [0mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "response_id", "uid", "archiver_id", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186956wfg;
+ Wed, 4 Feb 2009 12:48:29 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.214.11 with SMTP id m11mr358843wfg.279.1233780509250; Wed, 
+	04 Feb 2009 12:48:29 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:48:29 -0800
+Message-ID: <90d894590902041248w6f961231le22603815ae6d8b9@mail.gmail.com>
+Subject: Wassup
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd2e61cfc137d04621de871
+
+--000e0cd2e61cfc137d04621de871
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+trackr
+
+--000e0cd2e61cfc137d04621de871
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+trackr
+
+--000e0cd2e61cfc137d04621de871--', 7, '2009-02-04 20:48:51', NULL, '29', NULL, '2009-02-04 20:48:51')[0m
+  [4;36;1mEmail Destroy (0.1ms)[0m   [0;1mDELETE FROM "emails" WHERE "id" = 7[0m
+Redirected to /
+Completed in 1831ms (DB: 1) | 302 Found [http://localhost/emails/7]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:53:34) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 85ms (View: 14, DB: 1) | 200 OK [http://localhost/]
