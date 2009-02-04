@@ -404,3 +404,189 @@ Rendering emails/index
 Rendered emails/_email (1.6ms)
 Rendered emails/_email (1.6ms)
 Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 09:59:44) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.5ms)
+Completed in 276ms (View: 268, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 09:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/themes/default/style.css" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 09:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 09:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.3.min.js" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 09:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.scrollTo.js" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 09:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.localscroll.js" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:00:52) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.4ms)
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:02:26) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Completed in 85ms (View: 80, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:03:04) [GET]
+  [4;35;1mEmail Load (1.1ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.9ms)
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:03:08) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:03:18) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.4ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:04:58) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.4ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:05:04) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.6ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:05:18) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.4ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]

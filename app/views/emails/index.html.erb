@@ -1,5 +1,19 @@
-<ul>
-<% @emails.each do |e| %>
-  <li><%= display_email(e) %></li>
-<% end %>
-</ul>
+<div class="block" id="block-lists">
+  <div class="content">
+    <h2 class="title">Unanswered Emails</h2>
+    <div class="inner">
+      <ul class="list">    
+        <% @emails.each do |e| %>        
+        <li>
+          <div class="left">
+            <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+          </div>
+          <div class="item">                
+            <p><%= display_email(e) %></p>
+          </div>              
+        </li>    
+        <% end %>     
+      </ul>
+    </div>
+  </div>
+</div>                          
