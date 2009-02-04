@@ -3,13 +3,13 @@
     <h2 class="title">Archived Emails</h2>
     <div class="inner">
       <ul class="list">    
-        <% @emails.each do |e| %>        
+        <% @emails.each do |email| %>        
         <li>
           <div class="left">
             <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
           </div>
           <div class="item">                
-            <p><%= display_email(e) %></p>
+            <p><%= display_email(email) %></p>
           </div>              
         </li>    
         <% end %>     

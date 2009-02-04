@@ -20,7 +20,6 @@
       </div>      
       <div id="main-navigation">
         <ul>
-          <%= params[:action] %>
           <li class="first <%= 'active' if params[:action] == 'index' %>"><%= link_to "Unanswered", emails_path %></li>
           <li class="<%= 'active' if params[:action] == 'archive' %>"><%= link_to 'Archive', archive_emails_path %></li>
         </ul>

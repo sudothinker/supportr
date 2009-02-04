@@ -2,4 +2,4 @@
 <hr />
 <%= email.subject %>
 <hr />
-<%= RedCloth.new(body_from_tmail(email)).to_html %>
+<%= RedCloth.new(email.body).to_html %>

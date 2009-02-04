@@ -1,0 +1,4 @@
+<%= RedCloth.new(@msg).to_html %>
+
+On <%= @time.strftime("%a, %b %d, %Y at %I:%M%p") %>, <%= @from %> wrote:
+<%= RedCloth.new(@original).to_html %>

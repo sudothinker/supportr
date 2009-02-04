@@ -3,13 +3,22 @@
     <h2 class="title">Unanswered Emails</h2>
     <div class="inner">
       <ul class="list">    
-        <% @emails.each do |e| %>        
+        <% @emails.each do |email| %>        
         <li>
           <div class="left">
-            <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+            <% form_for email do |form| %>
+              <%= form.hidden_field :event, :value => 'archive' %>
+              <%= submit_tag "Ignore" %>
+            <% end %>
+            
+            <% form_for email do |form| %>
+              <%= form.select :response_id, Response.all.map {|m| [ m.name, m.id ] } %>              
+              <%= form.hidden_field :event, :value => "reply" %>
+              <%= submit_tag "Reply" %>
+            <% end %>
           </div>
           <div class="item">                
-            <p><%= display_email(e) %></p>
+            <p><%= display_email(email) %></p>
           </div>              
         </li>    
         <% end %>     

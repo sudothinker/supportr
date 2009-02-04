@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :responses
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -34,7 +36,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
   map.emails '/', :controller => 'emails', :action => 'index'
   map.archive_emails '/archive', :controller => 'emails', :action => 'archive'
-  #map.resources :emails, :collection => {:archive => :get}
+  map.resources :emails, :collection => {:archive => :get}
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.

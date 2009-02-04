@@ -937,3 +937,2175 @@ Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:44:05) [GET]
 Rendering template within layouts/application
 Rendering emails/archive
 Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:44:38) [GET]
+  [4;36;1mEmail Load (0.9ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 235ms (View: 175, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:44:40) [GET]
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:44:41) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.8ms)
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:45:31) [GET]
+  [4;35;1mEmail Load (0.8ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.9ms)
+Completed in 88ms (View: 81, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:46:05) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.6ms)
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:46:29) [GET]
+  [4;35;1mEmail Load (0.8ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:46:37) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Completed in 235ms (View: 175, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:46:38) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:46:54) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+
+ActionView::TemplateError (undefined local variable or method `email' for #<ActionView::Base:0x2414464>) on line #9 of app/views/emails/index.html.erb:
+6:         <% @emails.each do |e| %>        
+7:         <li>
+8:           <div class="left">
+9:             <% form_for email do |form| %>
+10:               <%= form.hidden_field :event, 'archive' %>
+11:               <%= submit_tag "Submit" %>
+12:               <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+
+    app/views/emails/index.html.erb:9
+    app/views/emails/index.html.erb:6:in `each'
+    app/views/emails/index.html.erb:6
+    thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+    thin (0.8.1) lib/thin/connection.rb:50:in `process'
+    thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+    thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+    thin (0.8.1) lib/thin/server.rb:146:in `start'
+    thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+    thin (0.8.1) lib/thin/runner.rb:166:in `send'
+    thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+    thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+    thin (0.8.1) bin/thin:6
+    /usr/local/bin/thin:19:in `load'
+    /usr/local/bin/thin:19
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:47:01) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+
+ActionView::TemplateError (undefined method `email_path' for #<ActionView::Base:0x263e80c>) on line #9 of app/views/emails/index.html.erb:
+6:         <% @emails.each do |email| %>        
+7:         <li>
+8:           <div class="left">
+9:             <% form_for email do |form| %>
+10:               <%= form.hidden_field :event, 'archive' %>
+11:               <%= submit_tag "Submit" %>
+12:               <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+
+    app/views/emails/index.html.erb:9
+    app/views/emails/index.html.erb:6:in `each'
+    app/views/emails/index.html.erb:6
+    thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+    thin (0.8.1) lib/thin/connection.rb:50:in `process'
+    thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+    thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+    thin (0.8.1) lib/thin/server.rb:146:in `start'
+    thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+    thin (0.8.1) lib/thin/runner.rb:166:in `send'
+    thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+    thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+    thin (0.8.1) bin/thin:6
+    /usr/local/bin/thin:19:in `load'
+    /usr/local/bin/thin:19
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:47:09) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+
+ActionView::TemplateError (undefined method `merge' for "archive":String) on line #10 of app/views/emails/index.html.erb:
+7:         <li>
+8:           <div class="left">
+9:             <% form_for email do |form| %>
+10:               <%= form.hidden_field :event, 'archive' %>
+11:               <%= submit_tag "Submit" %>
+12:               <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+13:             <% end %>
+
+    app/views/emails/index.html.erb:10
+    app/views/emails/index.html.erb:9
+    app/views/emails/index.html.erb:6:in `each'
+    app/views/emails/index.html.erb:6
+    thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+    thin (0.8.1) lib/thin/connection.rb:50:in `process'
+    thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+    thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+    thin (0.8.1) lib/thin/server.rb:146:in `start'
+    thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+    thin (0.8.1) lib/thin/runner.rb:166:in `send'
+    thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+    thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+    thin (0.8.1) bin/thin:6
+    /usr/local/bin/thin:19:in `load'
+    /usr/local/bin/thin:19
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:47:18) [GET]
+  [4;35;1mEmail Load (0.8ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:47:24) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:47:28) [GET]
+  [4;35;1mEmail Load (1.0ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (64.8ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Completed in 100ms (View: 91, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:47:36) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 10:47:47) [PUT]
+  Parameters: {"commit"=>"Ignore", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"1", "email"=>{"event"=>"archive"}}
+
+ActionController::UnknownAction (No action responded to update. Actions: archive and index):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 10:48:16) [PUT]
+  Parameters: {"commit"=>"Ignore", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"1", "email"=>{"event"=>"archive"}}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: event):
+  app/controllers/emails_controller.rb:12:in `update'
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 10:49:11) [PUT]
+  Parameters: {"commit"=>"Ignore", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"1", "email"=>{"event"=>"archive"}}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mEmail::Archive Create (0.5ms)[0m   [0mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "uid", "archiver_id", "created_at") VALUES('MIME-Version: 1.0
+Received: by 10.142.215.15 with HTTP; Wed, 4 Feb 2009 08:51:04 -0800 (PST)
+Date: Wed, 4 Feb 2009 08:51:04 -0800
+Delivered-To: supporttrackr@gmail.com
+Message-ID: <35c02b870902040851k6e50d879k9ef4835ad3086fba@mail.gmail.com>
+Subject: it
+From: Support Test <supporttrackr@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000325563a32ed56b604621a976e
+
+--000325563a32ed56b604621a976e
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+in
+
+--000325563a32ed56b604621a976e
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+in
+
+--000325563a32ed56b604621a976e--', 1, '2009-02-04 16:51:59', '22', NULL, '2009-02-04 16:51:59')[0m
+  [4;36;1mEmail Destroy (0.1ms)[0m   [0;1mDELETE FROM "emails" WHERE "id" = 1[0m
+Redirected to /
+Completed in 139ms (DB: 1) | 302 Found [http://localhost/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:49:11) [GET]
+  [4;35;1mEmail Load (0.8ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.8ms)
+Rendered emails/_email (1.9ms)
+Completed in 37ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:49:15) [GET]
+  [4;36;1mEmail::Archive Load (0.5ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (1.7ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:49:17) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 10:49:18) [PUT]
+  Parameters: {"commit"=>"Ignore", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"2", "email"=>{"event"=>"archive"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+  [4;35;1mEmail::Archive Create (0.5ms)[0m   [0mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "uid", "archiver_id", "created_at") VALUES('MIME-Version: 1.0
+Received: by 10.142.215.15 with HTTP; Wed, 4 Feb 2009 09:00:49 -0800 (PST)
+Date: Wed, 4 Feb 2009 09:00:49 -0800
+Delivered-To: supporttrackr@gmail.com
+Message-ID: <35c02b870902040900g3da19566k6b9708332d62ddb9@mail.gmail.com>
+Subject: another
+From: Support Test <supporttrackr@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd1492ed26a4004621aba33
+
+--000e0cd1492ed26a4004621aba33
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+one
+
+--000e0cd1492ed26a4004621aba33
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+one
+
+--000e0cd1492ed26a4004621aba33--', 2, '2009-02-04 17:01:08', '23', NULL, '2009-02-04 17:01:08')[0m
+  [4;36;1mEmail Destroy (0.1ms)[0m   [0;1mDELETE FROM "emails" WHERE "id" = 2[0m
+Redirected to /
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/emails/2]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:49:18) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.9ms)
+Completed in 85ms (View: 79, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:49:19) [GET]
+  [4;36;1mEmail::Archive Load (0.7ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:49:22) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+Migrating to CreateResponses (20090204185118)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mCREATE TABLE "responses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204185118')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (53.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("email_archives")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("responses")[0m
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 10:53:35) [GET]
+  [4;36;1mResponse Load (0.4ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendering template within layouts/responses
+Rendering responses/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/responses]
+
+
+Processing ResponsesController#new (for 127.0.0.1 at 2009-02-04 10:53:36) [GET]
+Rendering template within layouts/responses
+Rendering responses/new
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/responses/new]
+
+
+Processing ResponsesController#create (for 127.0.0.1 at 2009-02-04 10:53:53) [POST]
+  Parameters: {"response"=>{"body"=>"Thank you for your response.\r\n\r\nBest,\r\nHowcast Support\r\n"}, "commit"=>"Create", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w="}
+  [4;35;1mResponse Create (0.4ms)[0m   [0mINSERT INTO "responses" ("updated_at", "body", "created_at") VALUES('2009-02-04 18:53:53', 'Thank you for your response.
+
+Best,
+Howcast Support
+', '2009-02-04 18:53:53')[0m
+Redirected to #<Response:0x2342874>
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/responses]
+
+
+Processing ResponsesController#show (for 127.0.0.1 at 2009-02-04 10:53:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResponse Load (0.2ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Rendering template within layouts/responses
+Rendering responses/show
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/responses/1]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 10:53:56) [GET]
+  [4;35;1mResponse Load (0.5ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendering template within layouts/responses
+Rendering responses/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 10:54:35) [GET]
+  [4;36;1mResponse Load (0.5ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 11:05:18) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.8ms)
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 11:05:28) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.9ms)
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 11:06:42) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.9ms)
+Completed in 282ms (View: 272, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 11:06:45) [PUT]
+  Parameters: {"commit"=>"Respond with Thank y...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: response_id):
+  app/controllers/emails_controller.rb:12:in `update'
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendered rescues/_trace (87.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+Migrating to CreateResponses (20090204185322)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "responses" already exists: CREATE TABLE "responses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+Migrating to CreateResponses (20090204185322)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204185322')[0m
+Migrating to EmailResponses (20090204190549)
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mALTER TABLE "emails" ADD "response_id" integer[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mVACUUM[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204190549')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("email_archives")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("responses")[0m
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2009-02-04 11:07:57) [GET]
+  Parameters: {"id"=>"3"}
+
+ActionController::UnknownAction (No action responded to show. Actions: archive, index, and update):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 11:08:04) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.4ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.9ms)
+Completed in 199ms (View: 189, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 11:08:05) [PUT]
+  Parameters: {"commit"=>"Respond with Thank y...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mEmail Update (0.7ms)[0m   [0mUPDATE "emails" SET "response_id" = 1, "updated_at" = '2009-02-04 19:08:05' WHERE "id" = 3[0m
+
+NoMethodError (undefined method `reply!' for #<Email:0x236b9a4>):
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendered rescues/_trace (101.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 11:15:56) [PUT]
+  Parameters: {"commit"=>"Respond with Thank y...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mEmail Update (0.4ms)[0m   [0mUPDATE "emails" SET "response_id" = 1, "updated_at" = '2009-02-04 19:15:56' WHERE "id" = 3[0m
+Redirected to /
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 11:15:56) [GET]
+  [4;36;1mEmail Load (0.9ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.8ms)
+Completed in 40ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 11:16:00) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.7ms)
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:01:50) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (2.0ms)
+Completed in 100ms (View: 92, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:01:52) [PUT]
+  Parameters: {"commit"=>"Respond with Thank y...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:01:52 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Thank you for your response.
+
+Best,
+Howcast Support
+Redirected to /
+Completed in 44ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:01:52) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.8ms)
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:02:04) [GET]
+  [4;36;1mEmail Load (0.9ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.4ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (2.0ms)
+Completed in 283ms (View: 259, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:02:06) [PUT]
+  Parameters: {"commit"=>"Respond with Thank y...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:02:06 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Thank you for your response.
+
+Best,
+Howcast Support
+Redirected to /
+Completed in 101ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:02:06) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.4ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (2.0ms)
+Completed in 38ms (View: 32, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 12:03:19) [GET]
+  [4;36;1mResponse Load (0.5ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 40ms (View: 35, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing ResponsesController#edit (for 127.0.0.1 at 2009-02-04 12:03:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mResponse Load (0.2ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering responses/edit
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://localhost/responses/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:03:21) [GET]
+
+ActionController::RoutingError (No route matches "/responses/1/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:03:21) [GET]
+
+ActionController::RoutingError (No route matches "/responses/1/javascripts/jquery-1.3.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:03:21) [GET]
+
+ActionController::RoutingError (No route matches "/responses/1/stylesheets/themes/default/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResponsesController#update (for 127.0.0.1 at 2009-02-04 12:03:28) [PUT]
+  Parameters: {"response"=>{"body"=>"*Thank* you for your response.\r\n\r\nBest,\r\nHowcast Support\r\n"}, "commit"=>"Update", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"1"}
+  [4;36;1mResponse Load (0.2ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+  [4;35;1mResponse Update (0.5ms)[0m   [0mUPDATE "responses" SET "body" = '*Thank* you for your response.
+
+Best,
+Howcast Support
+', "updated_at" = '2009-02-04 20:03:28' WHERE "id" = 1[0m
+Redirected to #<Response:0x21130bc>
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/responses/1]
+
+
+Processing ResponsesController#show (for 127.0.0.1 at 2009-02-04 12:03:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering responses/show
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/responses/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:03:29) [GET]
+
+ActionController::RoutingError (No route matches "/responses/stylesheets/themes/default/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResponsesController#stylesheets to css (for 127.0.0.1 at 2009-02-04 12:03:29) [GET]
+  Parameters: {"id"=>"base"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:03:29) [GET]
+
+ActionController::RoutingError (No route matches "/responses/javascripts/jquery-1.3.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:03:32) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.7ms)
+Completed in 33ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:03:34) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;36;1mResponse Load (0.2ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:03:34 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+Redirected to /
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:03:34) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (73.5ms)
+Completed in 109ms (View: 102, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:04:22) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:04:22 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+Redirected to /
+Completed in 37ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:04:22) [GET]
+  [4;35;1mEmail Load (0.8ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.8ms)
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:04:28) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:04:28 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+Redirected to /
+Completed in 37ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:04:28) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (6.3ms)
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:04:37) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:04:37 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+  /usr/local/lib/ruby/1.8/net/protocol.rb:206:in `initialize'
+  /usr/local/lib/ruby/1.8/net/protocol.rb:206:in `new'
+  /usr/local/lib/ruby/1.8/net/protocol.rb:206:in `old_open'
+  /usr/local/lib/ruby/1.8/timeout.rb:56:in `timeout'
+  /usr/local/lib/ruby/1.8/timeout.rb:76:in `timeout'
+  /usr/local/lib/ruby/1.8/net/protocol.rb:206:in `old_open'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:393:in `do_start'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:378:in `start'
+  app/models/email.rb:27:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (112.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:05:42) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:05:42 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+Redirected to /
+Completed in 434ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:05:43) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.9ms)
+Completed in 108ms (View: 99, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:09:22) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:09:23 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. 30sm176199wfd.55
+):
+  /usr/local/lib/ruby/1.8/net/smtp.rb:577:in `auth_plain'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `__send__'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `authenticate'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:411:in `do_start'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:378:in `start'
+  app/models/email.rb:27:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (99.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:10:26) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:10:26 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. 9sm191562wfc.3
+):
+  /usr/local/lib/ruby/1.8/net/smtp.rb:577:in `auth_plain'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `__send__'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `authenticate'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:411:in `do_start'
+  /usr/local/lib/ruby/gems/1.8/gems/adzap-ar_mailer-1.4.3/lib/smtp_tls.rb:29:in `send'
+  /usr/local/lib/ruby/gems/1.8/gems/adzap-ar_mailer-1.4.3/lib/smtp_tls.rb:29:in `start'
+  app/models/email.rb:27:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (110.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:13:49) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:13:49 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. c20sm7354236rvf.8
+):
+  /usr/local/lib/ruby/1.8/net/smtp.rb:577:in `auth_plain'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `__send__'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `authenticate'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:411:in `do_start'
+  /usr/local/lib/ruby/gems/1.8/gems/adzap-ar_mailer-1.4.3/lib/smtp_tls.rb:29:in `send'
+  /usr/local/lib/ruby/gems/1.8/gems/adzap-ar_mailer-1.4.3/lib/smtp_tls.rb:29:in `start'
+  app/models/email.rb:27:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (96.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:14:33) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:14:34 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. c20sm7353556rvf.8
+):
+  /usr/local/lib/ruby/1.8/net/smtp.rb:577:in `auth_plain'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `__send__'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `authenticate'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:411:in `do_start'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:378:in `start'
+  app/models/email.rb:27:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (98.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:15:44) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:15:45 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. g22sm7337517rvb.9
+):
+  /usr/local/lib/ruby/1.8/net/smtp.rb:577:in `auth_plain'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `__send__'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:571:in `authenticate'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:411:in `do_start'
+  /usr/local/lib/ruby/1.8/net/smtp.rb:378:in `start'
+  app/models/email.rb:27:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (95.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:21:11) [PUT]
+  Parameters: {"commit"=>"Respond with *Thank*...", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:21:11 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+Redirected to /
+Completed in 1670ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:21:12) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.4ms)[0m   [0mSELECT * FROM "responses" [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47emails47index46html46erb at /Users/michael/code/rails/supportr/app/views/emails/index.html.erb:18)
+Rendered emails/_email (1.8ms)
+Completed in 115ms (View: 34, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+Migrating to CreateResponses (20090204185322)
+Migrating to EmailResponses (20090204190549)
+Migrating to ResponseNames (20090204202328)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mALTER TABLE "responses" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204202328')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("email_archives")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("emails")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("responses")[0m
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 12:24:28) [GET]
+  [4;36;1mResponse Load (0.6ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing ResponsesController#edit (for 127.0.0.1 at 2009-02-04 12:24:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mResponse Load (0.2ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering responses/edit
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/responses/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:24:30) [GET]
+
+ActionController::RoutingError (No route matches "/responses/1/javascripts/jquery-1.3.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:24:30) [GET]
+
+ActionController::RoutingError (No route matches "/responses/1/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:24:30) [GET]
+
+ActionController::RoutingError (No route matches "/responses/1/stylesheets/themes/default/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResponsesController#update (for 127.0.0.1 at 2009-02-04 12:24:34) [PUT]
+  Parameters: {"response"=>{"name"=>"thanks", "body"=>"*Thank* you for your response.\r\n\r\nBest,\r\nHowcast Support\r\n"}, "commit"=>"Update", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"1"}
+  [4;36;1mResponse Load (0.4ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+  [4;35;1mResponse Update (0.5ms)[0m   [0mUPDATE "responses" SET "name" = 'thanks', "updated_at" = '2009-02-04 20:24:34' WHERE "id" = 1[0m
+Redirected to #<Response:0x217e54c>
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/responses/1]
+
+
+Processing ResponsesController#show (for 127.0.0.1 at 2009-02-04 12:24:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering responses/show
+Completed in 110ms (View: 104, DB: 0) | 200 OK [http://localhost/responses/1]
+
+
+Processing ResponsesController#stylesheets to css (for 127.0.0.1 at 2009-02-04 12:24:34) [GET]
+  Parameters: {"id"=>"base"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:24:34) [GET]
+
+ActionController::RoutingError (No route matches "/responses/stylesheets/themes/default/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 12:24:34) [GET]
+
+ActionController::RoutingError (No route matches "/responses/javascripts/jquery-1.3.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:24:39) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+
+ActionView::TemplateError (undefined local variable or method `r' for #<ActionView::Base:0x23a2a1c>) on line #17 of app/views/emails/index.html.erb:
+14:             <% form_for email do |form| %>
+15:               <%= form.select :response_id, Response.all.map {|m| [ m.name, m.id ] }, { :include_blank => true } %>              
+16:               <%= form.hidden_field :event, :value => "reply" %>
+17:               <%= submit_tag "Respond with #{truncate(r.body, 10)}" %>
+18:             <% end %>
+19:           </div>
+20:           <div class="item">                
+
+    app/views/emails/index.html.erb:17
+    app/views/emails/index.html.erb:14
+    app/views/emails/index.html.erb:6:in `each'
+    app/views/emails/index.html.erb:6
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:24:55) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.4ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+Completed in 256ms (View: 250, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:25:02) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.7ms)
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:25:05) [PUT]
+  Parameters: {"commit"=>"Reply", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:25:05 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+NoMethodError (undefined method `response_id=' for #<Email::Archive:0x20fad8c>):
+  app/models/email.rb:28:in `reply!'
+  app/models/email.rb:10:in `send'
+  app/models/email.rb:10:in `process_events'
+  app/models/email.rb:10:in `map'
+  app/models/email.rb:10:in `process_events'
+  app/controllers/emails_controller.rb:12:in `update'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+Migrating to CreateResponses (20090204185322)
+Migrating to EmailResponses (20090204190549)
+Migrating to ResponseNames (20090204202328)
+Migrating to EmailArchiveResponseId (20090204202522)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mALTER TABLE "email_archives" ADD "response_id" integer[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204202522')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("email_archives")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("emails")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("responses")[0m
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2009-02-04 12:27:22) [GET]
+  Parameters: {"id"=>"3"}
+
+ActionController::UnknownAction (No action responded to show. Actions: archive, index, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:27:25) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.1ms)
+Completed in 202ms (View: 192, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:28:21) [PUT]
+  Parameters: {"commit"=>"Reply", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"3", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:28:21 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: this is a test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+  [4;36;1mEmail::Archive Create (0.7ms)[0m   [0;1mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "response_id", "uid", "archiver_id", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs179728wfg;
+ Wed, 4 Feb 2009 10:12:19 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.108.2 with SMTP id g2mr3030151wfc.259.1233771138434; Wed, 
+	04 Feb 2009 10:12:18 -0800 (PST)
+Date: Wed, 4 Feb 2009 10:12:18 -0800
+Message-ID: <90d894590902041012k5c04ada1j5968c51a66865e13@mail.gmail.com>
+Subject: this is a test
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=001636e90d4670c8c704621bba6a
+
+--001636e90d4670c8c704621bba6a
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+bold text
+bold and italic
+
+--001636e90d4670c8c704621bba6a
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<span class=3D"Apple-style-span" style=3D"font-weight: bold;">bold text</sp=
+an><div><span class=3D"Apple-style-span" style=3D"font-weight: bold;"><br><=
+/span></div><div><span class=3D"Apple-style-span" style=3D"font-weight: bol=
+d;"><span class=3D"Apple-style-span" style=3D"font-style: italic;">bold and=
+ italic</span></span></div>
+
+--001636e90d4670c8c704621bba6a--', 3, '2009-02-04 19:15:56', 1, '24', NULL, '2009-02-04 18:12:24')[0m
+  [4;35;1mEmail Destroy (0.2ms)[0m   [0mDELETE FROM "emails" WHERE "id" = 3[0m
+Redirected to /
+Completed in 1775ms (DB: 1) | 302 Found [http://localhost/emails/3]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:28:22) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+Received email: 25
+  [4;35;1mEmail Create (0.0ms)[0m   [0mSQLite3::SQLException: SQL logic error or missing database: INSERT INTO "emails" ("message", "updated_at", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186200wfg;
+ Wed, 4 Feb 2009 12:28:42 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.192.1 with SMTP id p1mr3004916wff.17.1233779322360; Wed, 
+	04 Feb 2009 12:28:42 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:28:42 -0800
+Message-ID: <90d894590902041228h52d8d36cs9b2bd3da2770bd3a@mail.gmail.com>
+Subject: I need help
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd28d783d933b04621da234
+
+--000e0cd28d783d933b04621da234
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+urgently
+
+--000e0cd28d783d933b04621da234
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+urgently
+
+--000e0cd28d783d933b04621da234--', '2009-02-04 20:29:12', 25, '2009-02-04 20:29:12')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:29:37) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:14) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:15) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:16) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:17) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:18) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:18) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:30) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:31) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:32) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:43) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:30:46) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:31:24) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:31:58) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 79ms (View: 72, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:32:11) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:32:20) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:32:54) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:34:07) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:34:19) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+Received email: 26
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186436wfg;
+ Wed, 4 Feb 2009 12:34:15 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.174.8 with SMTP id w8mr1778701wfe.61.1233779655151; Wed, 
+	04 Feb 2009 12:34:15 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:34:15 -0800
+Message-ID: <90d894590902041234k7123e915ifd187b6f1bc1c4e@mail.gmail.com>
+Subject: i need help
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd22d5213902304621db6be
+
+--000e0cd22d5213902304621db6be
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+somebody
+
+--000e0cd22d5213902304621db6be
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+somebody
+
+--000e0cd22d5213902304621db6be--', '2009-02-04 20:34:27', NULL, 26, '2009-02-04 20:34:27')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:34:44) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.8ms)
+Completed in 93ms (View: 87, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:34:47) [PUT]
+  Parameters: {"commit"=>"Reply", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"4", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 4) [0m
+  [4;35;1mEmail Update (0.5ms)[0m   [0mUPDATE "emails" SET "response_id" = 1, "updated_at" = '2009-02-04 20:34:47' WHERE "id" = 4[0m
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:34:47 -0800
+From: support@howcast.com
+To: michael@howcast.com
+Subject: Re: i need help
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+  [4;35;1mEmail::Archive Create (0.3ms)[0m   [0mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "response_id", "uid", "archiver_id", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186436wfg;
+ Wed, 4 Feb 2009 12:34:15 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.174.8 with SMTP id w8mr1778701wfe.61.1233779655151; Wed, 
+	04 Feb 2009 12:34:15 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:34:15 -0800
+Message-ID: <90d894590902041234k7123e915ifd187b6f1bc1c4e@mail.gmail.com>
+Subject: i need help
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd22d5213902304621db6be
+
+--000e0cd22d5213902304621db6be
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+somebody
+
+--000e0cd22d5213902304621db6be
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+somebody
+
+--000e0cd22d5213902304621db6be--', 4, '2009-02-04 20:34:47', 1, '26', NULL, '2009-02-04 20:34:27')[0m
+  [4;36;1mEmail Destroy (0.1ms)[0m   [0;1mDELETE FROM "emails" WHERE "id" = 4[0m
+Redirected to /
+Completed in 1403ms (DB: 1) | 302 Found [http://localhost/emails/4]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:34:48) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+Received email: 27
+  [4;35;1mEmail Create (0.6ms)[0m   [0mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186652wfg;
+ Wed, 4 Feb 2009 12:39:45 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.125.9 with SMTP id x9mr61466wfc.331.1233779985421; Wed, 04 
+	Feb 2009 12:39:45 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:39:45 -0800
+Message-ID: <90d894590902041239l3ec16487p285bd3b31b41c3d7@mail.gmail.com>
+Subject: yo
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd228b8c316cd04621dc9a0
+
+--000e0cd228b8c316cd04621dc9a0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+do it
+
+--000e0cd228b8c316cd04621dc9a0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+do it
+
+--000e0cd228b8c316cd04621dc9a0--', '2009-02-04 20:40:34', NULL, 27, '2009-02-04 20:40:34')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:42:03) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.3ms)
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:42:35) [PUT]
+  Parameters: {"commit"=>"Reply", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"5", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+  [4;35;1mEmail Update (0.3ms)[0m   [0mUPDATE "emails" SET "response_id" = 1, "updated_at" = '2009-02-04 20:42:35' WHERE "id" = 5[0m
+  [4;36;1mResponse Load (0.2ms)[0m   [0;1mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:42:35 -0800
+To: michael@howcast.com
+Subject: Re: yo
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+On Wed, Feb 04, 2009 at 08:40PM, Michael Murray <michael@howcast.com> wrote:
+> <p>do it</p>
+  [4;35;1mEmail::Archive Create (0.2ms)[0m   [0mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "response_id", "uid", "archiver_id", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186652wfg;
+ Wed, 4 Feb 2009 12:39:45 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.125.9 with SMTP id x9mr61466wfc.331.1233779985421; Wed, 04 
+	Feb 2009 12:39:45 -0800 (PST)
+Date: Wed, 4 Feb 2009 12:39:45 -0800
+Message-ID: <90d894590902041239l3ec16487p285bd3b31b41c3d7@mail.gmail.com>
+Subject: yo
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd228b8c316cd04621dc9a0
+
+--000e0cd228b8c316cd04621dc9a0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+do it
+
+--000e0cd228b8c316cd04621dc9a0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+do it
+
+--000e0cd228b8c316cd04621dc9a0--', 5, '2009-02-04 20:42:35', 1, '27', NULL, '2009-02-04 20:40:34')[0m
+  [4;36;1mEmail Destroy (0.1ms)[0m   [0;1mDELETE FROM "emails" WHERE "id" = 5[0m
+Redirected to /
+Completed in 1689ms (DB: 1) | 302 Found [http://localhost/emails/5]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:42:37) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:44:58) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:44:59) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:00) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:00) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 80ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:01) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:02) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:02) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:03) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:03) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:04) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:05) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:05) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:06) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:07) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:08) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:08) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:09) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:10) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:10) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:11) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:11) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:12) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:12) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:14) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:14) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:16) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:17) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 81ms (View: 74, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:31) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:32) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+Received email: 28
+  [4;36;1mEmail Create (0.7ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186842wfg;
+ Wed, 4 Feb 2009 12:44:54 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.135.13 with SMTP id i13mr3089395wfd.217.1233780294463; 
+	Wed, 04 Feb 2009 12:44:54 -0800 (PST)
+In-Reply-To: <4989fdbbd2e08_183e10bbb2e3f4@iMik.local.tmail>
+References: <4989fdbbd2e08_183e10bbb2e3f4@iMik.local.tmail>
+Date: Wed, 4 Feb 2009 12:44:54 -0800
+Message-ID: <90d894590902041244q5f68920fh33668d9b2c3d7648@mail.gmail.com>
+Subject: Re: yo
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd22a142eb2dc04621ddc62
+
+--000e0cd22a142eb2dc04621ddc62
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+wassup
+
+On Wed, Feb 4, 2009 at 12:42 PM, <supporttrackr@gmail.com> wrote:
+
+> *Thank* you for your response.
+>
+> Best,
+> Howcast Support
+> On Wed, Feb 04, 2009 at 08:40PM, Michael Murray wrote: >
+>
+> do it
+>
+
+--000e0cd22a142eb2dc04621ddc62
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+wassup<br><br><div class=3D"gmail_quote">On Wed, Feb 4, 2009 at 12:42 PM, =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:supporttrackr@gmail.com">supporttra=
+ckr@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" st=
+yle=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;">
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br>
+Howcast Support</p>
+
+On Wed, Feb 04, 2009 at 08:40PM, Michael Murray wrote:
+&gt; <p>do it</p>
+</blockquote></div><br>
+
+--000e0cd22a142eb2dc04621ddc62--', '2009-02-04 20:45:46', NULL, 28, '2009-02-04 20:45:46')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:45:56) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.7ms)
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2009-02-04 12:46:07) [PUT]
+  Parameters: {"commit"=>"Reply", "authenticity_token"=>"jjY2bWsXZ1MeTuPCH6eA8zvFMKaEwT43qx0ozor8g1w=", "id"=>"6", "email"=>{"response_id"=>"1", "event"=>"reply"}}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 6) [0m
+  [4;36;1mEmail Update (182.7ms)[0m   [0;1mUPDATE "emails" SET "response_id" = 1, "updated_at" = '2009-02-04 20:46:07' WHERE "id" = 6[0m
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" WHERE ("responses"."id" = 1) [0m
+Sent mail to michael@howcast.com
+
+Date: Wed, 4 Feb 2009 12:46:07 -0800
+To: michael@howcast.com
+Subject: Re: Re: yo
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br />
+Howcast Support</p>
+
+--
+On Wed, Feb 04, 2009 at 08:45PM, Michael Murray <michael@howcast.com> wrote:
+<p>wassup</p>
+<p>On Wed, Feb 4, 2009 at 12:42 PM, &lt;supporttrackr@gmail.com&gt; wrote:</p>
+<p>&gt; <strong>Thank</strong> you for your response.<br />
+&gt;<br />
+&gt; Best,<br />
+&gt; Howcast Support<br />
+&gt; On Wed, Feb 04, 2009 at 08:40PM, Michael Murray wrote: &gt;<br />
+&gt;<br />
+&gt; do it<br />
+&gt;</p>
+  [4;36;1mEmail::Archive Create (0.2ms)[0m   [0;1mINSERT INTO "email_archives" ("message", "email_id", "updated_at", "response_id", "uid", "archiver_id", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs186842wfg;
+ Wed, 4 Feb 2009 12:44:54 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.135.13 with SMTP id i13mr3089395wfd.217.1233780294463; 
+	Wed, 04 Feb 2009 12:44:54 -0800 (PST)
+In-Reply-To: <4989fdbbd2e08_183e10bbb2e3f4@iMik.local.tmail>
+References: <4989fdbbd2e08_183e10bbb2e3f4@iMik.local.tmail>
+Date: Wed, 4 Feb 2009 12:44:54 -0800
+Message-ID: <90d894590902041244q5f68920fh33668d9b2c3d7648@mail.gmail.com>
+Subject: Re: yo
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd22a142eb2dc04621ddc62
+
+--000e0cd22a142eb2dc04621ddc62
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+wassup
+
+On Wed, Feb 4, 2009 at 12:42 PM, <supporttrackr@gmail.com> wrote:
+
+> *Thank* you for your response.
+>
+> Best,
+> Howcast Support
+> On Wed, Feb 04, 2009 at 08:40PM, Michael Murray wrote: >
+>
+> do it
+>
+
+--000e0cd22a142eb2dc04621ddc62
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+wassup<br><br><div class=3D"gmail_quote">On Wed, Feb 4, 2009 at 12:42 PM, =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:supporttrackr@gmail.com">supporttra=
+ckr@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" st=
+yle=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;">
+<p><strong>Thank</strong> you for your response.</p>
+<p>Best,<br>
+Howcast Support</p>
+
+On Wed, Feb 04, 2009 at 08:40PM, Michael Murray wrote:
+&gt; <p>do it</p>
+</blockquote></div><br>
+
+--000e0cd22a142eb2dc04621ddc62--', 6, '2009-02-04 20:46:07', 1, '28', NULL, '2009-02-04 20:45:46')[0m
+  [4;35;1mEmail Destroy (0.1ms)[0m   [0mDELETE FROM "emails" WHERE "id" = 6[0m
+Redirected to /
+Completed in 1417ms (DB: 184) | 302 Found [http://localhost/emails/6]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:46:09) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
