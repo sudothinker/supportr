@@ -1,20 +1,8 @@
 class Email < ActiveRecord::Base
+  include Tmailing
+  
   is_archived do
-    def parsed
-      @parsed ||= TMail::Mail.parse(message)
-    end
-    
-    def body
-      result = nil
-      if parsed.multipart?
-        parsed.parts.each do |part|
-          result = part.unquoted_body if part.content_type =~ /plain/i
-        end
-      else
-        result = parsed.unquoted_body
-      end
-      result
-    end
+    include Tmailing
   end
   
   belongs_to :response
@@ -35,22 +23,6 @@ class Email < ActiveRecord::Base
   end
   
   alias_method :events=, :event=
-  
-  def parsed
-    @parsed ||= TMail::Mail.parse(message)
-  end
-  
-  def body
-    result = nil
-    if parsed.multipart?
-      parsed.parts.each do |part|
-        result = part.unquoted_body if part.content_type =~ /plain/i
-      end
-    else
-      result = parsed.unquoted_body
-    end
-    result
-  end
   
   def reply!
     Mailer.deliver_reply(self)

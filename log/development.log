@@ -3596,3 +3596,147 @@ Rendered emails/_email (1.7ms)
 Rendered emails/_email (2.2ms)
 Rendered emails/_email (1.6ms)
 Completed in 197ms (View: 188, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:16:32) [GET]
+  [4;36;1mEmail::Archive Load (1.5ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (158.9ms)
+Rendered emails/_email (2.0ms)
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (2.0ms)
+Rendered emails/_email (2.4ms)
+Rendered emails/_email (1.9ms)
+Completed in 202ms (View: 188, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:16:34) [GET]
+  [4;35;1mEmail::Archive Load (1.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.4ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.3ms)
+Rendered emails/_email (2.0ms)
+Completed in 44ms (View: 34, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 13:16:37) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:17:12) [GET]
+  [4;35;1mEmail::Archive Load (1.3ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+
+ActionView::TemplateError (can't convert Array into String) on line #5 of app/views/emails/_email.html.erb:
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+5: <%= RedCloth.new(email.body).to_html %>
+
+    app/views/emails/_email.html.erb:5
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (94.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:17:18) [GET]
+  [4;36;1mEmail::Archive Load (1.3ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.3ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.1ms)
+Rendered emails/_email (1.7ms)
+Completed in 42ms (View: 32, DB: 1) | 200 OK [http://localhost/archive]
+Received email: 30
+  [4;36;1mEmail Create (0.4ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs188143wfg;
+ Wed, 4 Feb 2009 13:16:43 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.143.1.12 with SMTP id d12mr1163671wfi.203.1233782202940; Wed, 
+	04 Feb 2009 13:16:42 -0800 (PST)
+Date: Wed, 4 Feb 2009 13:16:42 -0800
+Message-ID: <90d894590902041316h2b9fc682s3968165386d3e35@mail.gmail.com>
+Subject: awas
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=001636e0a774efbe1c04621e4d6a
+
+--001636e0a774efbe1c04621e4d6a
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+saefe
+
+--001636e0a774efbe1c04621e4d6a
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+saefe
+
+--001636e0a774efbe1c04621e4d6a--', '2009-02-04 21:17:21', NULL, 30, '2009-02-04 21:17:21')[0m
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:17:29) [GET]
+  [4;35;1mEmail::Archive Load (1.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.5ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (1.9ms)
+Rendered emails/_email (2.2ms)
+Rendered emails/_email (66.3ms)
+Completed in 109ms (View: 99, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 13:17:30) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+Completed in 39ms (View: 30, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:17:32) [GET]
+  [4;36;1mEmail::Archive Load (1.7ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.0ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (2.1ms)
+Rendered emails/_email (1.6ms)
+Completed in 45ms (View: 32, DB: 2) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 13:17:32) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.7ms)
+Completed in 37ms (View: 28, DB: 1) | 200 OK [http://localhost/]
