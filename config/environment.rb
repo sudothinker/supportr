@@ -16,6 +16,8 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
+  config.gem 'RedCloth', :version => '4.1.1', :source => 'http://code.whytheluckystiff.net'
+  config.load_paths.unshift "#{RAILS_ROOT}/vendor/gems/RedCloth-4.1.1/ext/redcloth_scan"  
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"

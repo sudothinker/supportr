@@ -3,4 +3,7 @@ class EmailsController < ApplicationController
     @emails = Email.all
   end
   
+  def archive
+    @emails = Email::Archive.all
+  end
 end

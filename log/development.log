@@ -590,3 +590,350 @@ Rendering emails/index
 Rendered emails/_email (1.6ms)
 Rendered emails/_email (1.4ms)
 Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:11:43) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.5ms)
+Completed in 242ms (View: 233, DB: 1) | 200 OK [http://localhost/emails]
+Received email: 24
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs179728wfg;
+ Wed, 4 Feb 2009 10:12:19 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.108.2 with SMTP id g2mr3030151wfc.259.1233771138434; Wed, 
+	04 Feb 2009 10:12:18 -0800 (PST)
+Date: Wed, 4 Feb 2009 10:12:18 -0800
+Message-ID: <90d894590902041012k5c04ada1j5968c51a66865e13@mail.gmail.com>
+Subject: this is a test
+From: Michael Murray <michael@howcast.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=001636e90d4670c8c704621bba6a
+
+--001636e90d4670c8c704621bba6a
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+bold text
+bold and italic
+
+--001636e90d4670c8c704621bba6a
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<span class=3D"Apple-style-span" style=3D"font-weight: bold;">bold text</sp=
+an><div><span class=3D"Apple-style-span" style=3D"font-weight: bold;"><br><=
+/span></div><div><span class=3D"Apple-style-span" style=3D"font-weight: bol=
+d;"><span class=3D"Apple-style-span" style=3D"font-style: italic;">bold and=
+ italic</span></span></div>
+
+--001636e90d4670c8c704621bba6a--', '2009-02-04 18:12:24', 24, '2009-02-04 18:12:24')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:12:39) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:13:04) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.0ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.6ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:17:14) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.6ms)
+Completed in 234ms (View: 225, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:21:42) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:37:26) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.8ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (60.6ms)
+
+ActionView::TemplateError (undefined local variable or method `emails_archive_path' for #<ActionView::Base:0x23d5548>) on line #24 of app/views/layouts/application.html.erb:
+21:       <div id="main-navigation">
+22:         <ul>
+23:           <li class="first <%= 'active' if params[:action] == 'index' %>"><a href="#block-text">Unanswered</a></li>
+24:           <li class="<%= 'active' if params[:action] == 'archive' %>"><%= link_to 'Archive', emails_archive_path %></li>
+25:         </ul>
+26:         <div class="clear"></div>
+27:       </div>
+
+    app/views/layouts/application.html.erb:24
+    thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+    thin (0.8.1) lib/thin/connection.rb:50:in `process'
+    thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+    eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+    thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+    thin (0.8.1) lib/thin/server.rb:146:in `start'
+    thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+    thin (0.8.1) lib/thin/runner.rb:166:in `send'
+    thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+    thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+    thin (0.8.1) bin/thin:6
+    /usr/local/bin/thin:19:in `load'
+    /usr/local/bin/thin:19
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:37:34) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.6ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/emails]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:37:37) [GET]
+  [4;36;1mEmail::Archive Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: email_archives: SELECT * FROM "email_archives" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: email_archives: SELECT * FROM "email_archives" ):
+  app/controllers/emails_controller.rb:7:in `archive'
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE "email_archives" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email_id" integer, "archiver_id" integer) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mALTER TABLE "email_archives" ADD "created_at" datetime DEFAULT NULL[0m
+  [4;35;1mSQL (6.9ms)[0m   [0mVACUUM[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mALTER TABLE "email_archives" ADD "updated_at" datetime DEFAULT NULL[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mVACUUM[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mALTER TABLE "email_archives" ADD "message" text DEFAULT NULL[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mVACUUM[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mALTER TABLE "email_archives" ADD "uid" varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mVACUUM[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204184031')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("email_archives")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("emails")[0m
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:41:27) [GET]
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+
+ActionView::MissingTemplate (Missing template emails/archive.erb in view path app/views):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:42:19) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.6ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:42:21) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.7ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 10:42:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/rails.png" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:42:30) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:42:40) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:42:41) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:43:02) [GET]
+  [4;36;1mEmail Load (0.8ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.8ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Completed in 204ms (View: 195, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:43:09) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.1ms)
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:43:22) [GET]
+  [4;36;1mEmail::Archive Load (0.4ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+
+ActionView::MissingTemplate (Missing template emails/archive.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:43:39) [GET]
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:43:41) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.6ms)
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:43:42) [GET]
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 10:43:43) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.5ms)
+Rendered emails/_email (1.5ms)
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 10:44:05) [GET]
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/archive]
