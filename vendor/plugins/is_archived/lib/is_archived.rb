@@ -76,7 +76,7 @@ module Howcast
         #     class Video
         #       is_archived :extend => VideoArchiveExtension
         #     end
-        def is_archived(options={})
+        def is_archived(options={}, &extension)
           cattr_accessor :archive_class_name, :archive_table_name, :archive_foreign_key, :archive_inheritance_column
           self.archive_table_name = options[:table_name] || "#{base_class.name.demodulize.underscore}_archives"
           self.archive_class_name = options[:class_name] || "Archive"

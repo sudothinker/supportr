@@ -3217,3 +3217,382 @@ Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 12:53:34) [GET]
 Rendering template within layouts/application
 Rendering emails/index
 Completed in 85ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:55:07) [GET]
+  [4;36;1mEmail::Archive Load (1.4ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+
+ActionView::TemplateError (Missing template email/archives/_archive.erb in view path app/views) on line #12 of app/views/emails/archive.html.erb:
+9:             <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+10:           </div>
+11:           <div class="item">                
+12:             <p><%= display_email(email) %></p>
+13:           </div>              
+14:         </li>    
+15:         <% end %>     
+
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:55:37) [GET]
+  [4;35;1mEmail::Archive Load (1.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+
+ActionView::TemplateError (undefined method `parsed' for #<Email::Archive:0x2183524>) on line #1 of app/views/emails/_email.html.erb:
+1: <%= email.parsed.friendly_from %>: <%= email.parsed.from %>
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+
+    app/views/emails/_email.html.erb:1
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:56:18) [GET]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `extension' for #<Class:0x22e7c44>):
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (28.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:57:11) [GET]
+  [4;36;1mEmail::Archive Load (1.4ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+
+ActionView::TemplateError (undefined method `body' for #<Email::Archive:0x23743ec>) on line #5 of app/views/emails/_email.html.erb:
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+5: <%= RedCloth.new(email.body).to_html %>
+
+    app/views/emails/_email.html.erb:5
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (93.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:57:35) [GET]
+  [4;35;1mEmail::Archive Load (1.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.parsed) on line #1 of app/views/emails/_email.html.erb:
+1: <%= email.parsed.friendly_from %>: <%= email.parsed.from %>
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+
+    app/models/email.rb:4:in `parsed'
+    app/views/emails/_email.html.erb:1
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:05) [GET]
+  [4;35;1mEmail::Archive Load (1.5ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.parsed) on line #1 of app/views/emails/_email.html.erb:
+1: <%= email.parsed.friendly_from %>: <%= email.parsed.from %>
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+
+    app/models/email.rb:4:in `parsed'
+    app/views/emails/_email.html.erb:1
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:12) [GET]
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `archive_class' for #<Class:0x22775e8>):
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:18) [GET]
+  [4;35;1mEmail::Archive Load (1.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.parsed) on line #1 of app/views/emails/_email.html.erb:
+1: <%= email.parsed.friendly_from %>: <%= email.parsed.from %>
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+
+    app/models/email.rb:4:in `parsed'
+    app/views/emails/_email.html.erb:1
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:23) [GET]
+
+NoMethodError (undefined method `belongs_to' for #<Module:0x22c9a00>):
+  app/models/email.rb:3
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:29) [GET]
+
+NoMethodError (undefined method `belongs_to' for #<Module:0x217b568>):
+  app/models/email.rb:3
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:47) [GET]
+
+NoMethodError (undefined method `belongs_to' for #<Module:0x2423478>):
+  app/models/email.rb:3
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (29.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 12:59:50) [GET]
+  [4;35;1mEmail::Archive Load (1.3ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.3ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.2ms)
+Rendered emails/_email (1.7ms)
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 13:00:04) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:00:05) [GET]
+  [4;35;1mEmail::Archive Load (1.4ms)[0m   [0mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.2ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.1ms)
+Rendered emails/_email (2.6ms)
+Rendered emails/_email (2.1ms)
+Completed in 42ms (View: 34, DB: 1) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:01:45) [GET]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `original_class' for #<Class:0x237df3c>(Table doesn't exist)):
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:02:26) [GET]
+  [4;36;1mEmail::Archive Load (1.5ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.parsed) on line #1 of app/views/emails/_email.html.erb:
+1: <%= email.parsed.friendly_from %>: <%= email.parsed.from %>
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+
+    app/models/email.rb:5:in `parsed'
+    app/views/emails/_email.html.erb:1
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mEmail::Archive Load (0.6ms)[0m   [0;1mSELECT * FROM "email_archives" LIMIT 1[0m
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" LIMIT 1[0m
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" LIMIT 1[0m
+  [4;36;1mEmail Load (0.1ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mEmail::Archive Load (0.4ms)[0m   [0mSELECT * FROM "email_archives" LIMIT 1[0m
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:03:58) [GET]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `original_class' for #<Class:0x237df3c>(Table doesn't exist)):
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:04:48) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `original_class' for #<Class:0x21e5f94>(Table doesn't exist)):
+  app/models/email.rb:2
+  app/controllers/emails_controller.rb:7:in `archive'
+
+Rendered rescues/_trace (94.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:04:58) [GET]
+  [4;36;1mEmail::Archive Load (1.5ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.parsed) on line #1 of app/views/emails/_email.html.erb:
+1: <%= email.parsed.friendly_from %>: <%= email.parsed.from %>
+2: <hr />
+3: <%= email.parsed.subject %>
+4: <hr />
+
+    app/models/email.rb:5:in `parsed'
+    app/views/emails/_email.html.erb:1
+    app/helpers/emails_helper.rb:3:in `display_email'
+    app/views/emails/archive.html.erb:12
+    app/views/emails/archive.html.erb:6:in `each'
+    app/views/emails/archive.html.erb:6
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 13:05:26) [GET]
+  [4;36;1mEmail::Archive Load (1.4ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (159.8ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.2ms)
+Rendered emails/_email (1.6ms)
+Completed in 197ms (View: 188, DB: 1) | 200 OK [http://localhost/archive]
