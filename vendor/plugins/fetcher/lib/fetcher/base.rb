@@ -51,8 +51,8 @@ module Fetcher
     end
     
     # Send message to receiver object
-    def process_message(message)
-      @receiver.receive(message)
+    def process_message(message, uid)
+      @receiver.receive(message, uid)
     end
     
     # Stub. Should be overridden by subclass.

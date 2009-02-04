@@ -40,7 +40,7 @@ module Fetcher
       @connection.uid_search(['ALL']).each do |uid|
         msg = @connection.uid_fetch(uid,'RFC822').first.attr['RFC822']
         begin
-          process_message(msg)
+          process_message(msg, uid)
           add_to_processed_folder(uid) if @processed_folder
         rescue
           handle_bogus_message(msg)
