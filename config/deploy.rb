@@ -25,16 +25,13 @@ set :copy_cache, true
 set :runner, user
 
 after "deploy:symlink", "supportr_symlink_configs"
-after "deploy", "reload_mongrel", "reload_nginx", "deploy:cleanup"
+after "deploy", "reload_nginx", "deploy:cleanup"
 
-desc "Reload Mongrels"
-task :reload_mongrel do
-  run <<-CMD 
-    cd #{release_path} && mongrel_rails cluster::stop
-  CMD
-  run <<-CMD 
-    cd #{release_path} && mongrel_rails cluster::start
-  CMD
+namespace :deploy do  
+  desc "Restart the thins"  
+  task :restart do  
+    run "/etc/init.d/thin restart"  
+  end  
 end
 
 desc "Reload Nginx"

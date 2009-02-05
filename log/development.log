@@ -4029,3 +4029,168 @@ Rendered emails/_email (1.7ms)
 Rendered emails/_email (1.7ms)
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
 Completed in 55ms (View: 43, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:25:40) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.8ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.6ms)
+  [4;36;1mForward Load (0.6ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 259ms (View: 216, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 21:25:42) [GET]
+  [4;35;1mResponse Load (0.6ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 21:25:44) [GET]
+  [4;36;1mEmail::Archive Load (1.6ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (5.4ms)
+Rendered emails/_email (2.0ms)
+Rendered emails/_email (2.2ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (2.1ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Completed in 66ms (View: 54, DB: 2) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:25:45) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 50ms (View: 41, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-04 21:25:52) [GET]
+
+ActionController::RoutingError (No route matches "/index.html" with {:method=>:get}):
+  thin (0.8.1) lib/thin/connection.rb:59:in `pre_process'
+  thin (0.8.1) lib/thin/connection.rb:50:in `process'
+  thin (0.8.1) lib/thin/connection.rb:35:in `receive_data'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run_machine'
+  eventmachine (0.12.2) lib/eventmachine.rb:231:in `run'
+  thin (0.8.1) lib/thin/backends/base.rb:45:in `start'
+  thin (0.8.1) lib/thin/server.rb:146:in `start'
+  thin (0.8.1) lib/thin/controllers/controller.rb:79:in `start'
+  thin (0.8.1) lib/thin/runner.rb:166:in `send'
+  thin (0.8.1) lib/thin/runner.rb:166:in `run_command'
+  thin (0.8.1) lib/thin/runner.rb:136:in `run!'
+  thin (0.8.1) bin/thin:6
+  /usr/local/bin/thin:19:in `load'
+  /usr/local/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:25:55) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.8ms)
+  [4;36;1mForward Load (0.3ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 51ms (View: 42, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:26:26) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.8ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 52ms (View: 43, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:26:27) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mForward Load (0.3ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 112ms (View: 103, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:26:40) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.8ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 49ms (View: 40, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 21:26:47) [GET]
+  [4;36;1mResponse Load (0.5ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 21:26:49) [GET]
+  [4;35;1mResponse Load (0.9ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 21:26:50) [GET]
+  [4;36;1mEmail::Archive Load (1.8ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (66.0ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.2ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.6ms)
+Completed in 109ms (View: 99, DB: 2) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 21:26:51) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 50ms (View: 41, DB: 1) | 200 OK [http://localhost/]
