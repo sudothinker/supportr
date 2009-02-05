@@ -3740,3 +3740,292 @@ Rendering emails/index
   [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
 Rendered emails/_email (1.7ms)
 Completed in 37ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20090204040652)
+Migrating to EmailFields (20090204162823)
+Migrating to EmailArchives (20090204184031)
+Migrating to CreateResponses (20090204185322)
+Migrating to EmailResponses (20090204190549)
+Migrating to ResponseNames (20090204202328)
+Migrating to EmailArchiveResponseId (20090204202522)
+Migrating to CreateForwards (20090204223733)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (17.1ms)[0m   [0mCREATE TABLE "forwards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (15.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204223733')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("email_archives")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("forwards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("responses")[0m
+Received email: 37
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs191506wfg;
+ Wed, 4 Feb 2009 14:39:29 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.139.14 with SMTP id m14mr1100620wfd.276.1233787165233; 
+	Wed, 04 Feb 2009 14:39:25 -0800 (PST)
+Date: Wed, 4 Feb 2009 14:39:25 -0800
+Message-ID: <1f9689a80902041439j2a5b8859ta2edb42f1bd58ef3@mail.gmail.com>
+Subject: do
+From: Michael Murray <mdmurray@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd2dc40b652ff04621f75ca
+
+--000e0cd2dc40b652ff04621f75ca
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+it
+
+--000e0cd2dc40b652ff04621f75ca
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+it
+
+--000e0cd2dc40b652ff04621f75ca--', '2009-02-04 22:39:35', NULL, 37, '2009-02-04 22:39:35')[0m
+Received email: 38
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs191566wfg;
+ Wed, 4 Feb 2009 14:41:45 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.65.135.19 with SMTP id m19mr4208750qbn.77.1233787303920; Wed, 
+	04 Feb 2009 14:41:43 -0800 (PST)
+Date: Wed, 4 Feb 2009 14:41:43 -0800
+Message-ID: <1f9689a80902041441y4beb0c26g71acd0b6d7f9e164@mail.gmail.com>
+Subject: another
+From: Michael Murray <mdmurray@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=00c09f998e01fa867e04621f7d38
+
+--00c09f998e01fa867e04621f7d38
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+one
+
+--00c09f998e01fa867e04621f7d38
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+one
+
+--00c09f998e01fa867e04621f7d38--', '2009-02-04 22:42:06', NULL, 38, '2009-02-04 22:42:06')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 14:42:12) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.4ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (152.9ms)
+  [4;36;1mForward Load (0.3ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 312ms (View: 299, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ResponsesController#index (for 127.0.0.1 at 2009-02-04 14:43:00) [GET]
+  [4;35;1mResponse Load (0.5ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendering template within layouts/application
+Rendering responses/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/responses]
+
+
+Processing EmailsController#archive (for 127.0.0.1 at 2009-02-04 14:43:01) [GET]
+  [4;36;1mEmail::Archive Load (1.6ms)[0m   [0;1mSELECT * FROM "email_archives" [0m
+Rendering template within layouts/application
+Rendering emails/archive
+Rendered emails/_email (4.4ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.8ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (2.1ms)
+Rendered emails/_email (1.7ms)
+Rendered emails/_email (1.6ms)
+Rendered emails/_email (1.7ms)
+Completed in 104ms (View: 37, DB: 2) | 200 OK [http://localhost/archive]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 14:43:02) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.8ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 46ms (View: 37, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 15:38:16) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.3ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mForward Load (0.3ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 49ms (View: 37, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 15:38:17) [GET]
+  [4;35;1mEmail Load (0.7ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.8ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 46ms (View: 37, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 18:26:39) [GET]
+  [4;36;1mEmail Load (42.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (21.2ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (32.8ms)
+  [4;36;1mForward Load (20.3ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 624ms (View: 371, DB: 84) | 200 OK [http://localhost/]
+Received email: 39
+  [4;36;1mEmail Create (0.7ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs199092wfg;
+ Wed, 4 Feb 2009 20:01:28 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.142.52.7 with SMTP id z7mr22580wfz.51.1233806488041; Wed, 04 
+	Feb 2009 20:01:28 -0800 (PST)
+Date: Wed, 4 Feb 2009 20:01:28 -0800
+Message-ID: <1f9689a80902042001m72c1f907vc73d936454de0c59@mail.gmail.com>
+Subject: yo
+From: Michael Murray <mdmurray@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd2146c70f7f7046223f5b2
+
+--000e0cd2146c70f7f7046223f5b2
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+wassup
+
+--000e0cd2146c70f7f7046223f5b2
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+wassup
+
+--000e0cd2146c70f7f7046223f5b2--', '2009-02-05 04:01:30', NULL, 39, '2009-02-05 04:01:30')[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:02:08) [GET]
+  [4;36;1mEmail Load (3.0ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.5ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (273.2ms)
+  [4;36;1mForward Load (12.7ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 456ms (View: 382, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:16:51) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 33ms (View: 10, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:16:53) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_nonce at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:265)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_digest_response at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:184)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 12ms (View: 10, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:17:48) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_nonce at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:265)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_digest_response at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:184)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 13ms (View: 10, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:17:50) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_nonce at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:265)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_digest_response at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:184)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 12ms (View: 11, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:18:04) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 33ms (View: 9, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:18:06) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_nonce at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:265)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_digest_response at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:184)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 14ms (View: 12, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:18:07) [GET]
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_nonce at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:265)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from validate_digest_response at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:184)
+DEPRECATION WARNING: ActionController::Session::AbstractStore::SessionHash#session_idhas been deprecated.Please use #id instead.. (called from authentication_header at /Users/michael/code/rails/supportr/vendor/rails/actionpack/lib/action_controller/http_authentication.rb:216)
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 14ms (View: 12, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:22:12) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 13ms (View: 12, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:22:14) [GET]
+  [4;36;1mEmail Load (1.9ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mResponse Load (0.5ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (322.9ms)
+  [4;36;1mForward Load (1.1ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "responses" [0m
+Rendered emails/_email (2.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "forwards" [0m
+Completed in 482ms (View: 417, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:22:24) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 9ms (View: 9, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:22:24) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 9ms (View: 9, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2009-02-04 20:22:27) [GET]
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mResponse Load (0.3ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.7ms)
+  [4;35;1mForward Load (0.3ms)[0m   [0mSELECT * FROM "forwards" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "responses" [0m
+Rendered emails/_email (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
+Completed in 55ms (View: 43, DB: 2) | 200 OK [http://localhost/]

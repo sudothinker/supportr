@@ -20,12 +20,28 @@
           <div class="item">                
             <p><%= display_email(email) %></p>
             
-            <%= link_to_function("Reply", "$('#email_#{email.id}').toggle()") %>
-            <div id="email_<%= email.id %>" style="display:none">
+            <%= link_to_function("Reply", "$('#email_#{email.id}_reply').toggle()") %>
+            <div id="email_<%= email.id %>_reply" style="display:none">
               <% form_for email do |f| %>
                 <%= f.hidden_field :event, :value => "reply" %>
                 <%= f.text_area :reply %>
                 <%= submit_tag "Reply" %>
+              <% end %>
+            </div>
+            
+            <%= link_to_function("Forward", "$('#email_#{email.id}_forward').toggle()") %>
+            <div id="email_<%= email.id %>_forward" style="display:none">
+              <% form_for email do |f| %>
+                <%= f.hidden_field :event, :value => "forward" %>
+                <%= f.select :forward, Forward.all.map{ |f| [f.email, f.email] } %>
+                <%= submit_tag "Forward to this address" %>
+              <% end %>
+              
+              <% form_for email do |f| %>
+                <%= f.hidden_field :event, :value => "forward" %>
+                <%= f.text_field :forward %>
+                <%= f.check_box :save_forward %> Save this forward
+                <%= submit_tag "Forward" %>
               <% end %>
             </div>
           </div>              

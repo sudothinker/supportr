@@ -7,7 +7,7 @@ class Email < ActiveRecord::Base
   
   belongs_to :response
     
-  attr_accessor :events, :reply
+  attr_accessor :events, :reply, :forward, :save_forward
   after_save :process_events
   
   def process_events
@@ -26,6 +26,12 @@ class Email < ActiveRecord::Base
   
   def reply!
     Mailer.deliver_reply(self)
+    archive!
+  end
+  
+  def forward!
+    Forward.create! :email => forward if save_forward
+    Mailer.deliver_forward(self)
     archive!
   end
 end

@@ -9,5 +9,13 @@ class Mailer < ActionMailer::Base
                   :from => "#{email.parsed.friendly_from}: #{email.parsed.from}",
                   :original => email.body
   end
+  
+  def forward(email)
+    subject       "Fwd: #{email.parsed.subject}"
+    recipients    email.forward
+    sent_on       Time.now
+    content_type  'text/html'
+    body          :msg => email.body
+  end
 
 end
