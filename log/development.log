@@ -4194,3 +4194,106 @@ Rendered emails/_email (1.9ms)
 Rendered emails/_email (1.7ms)
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "forwards" [0m
 Completed in 50ms (View: 41, DB: 1) | 200 OK [http://localhost/]
+Received email: 40
+  [4;35;1mEmail Create (11.3ms)[0m   [0mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('Delivered-To: supporttrackr@gmail.com
+Received: by 10.142.215.15 with SMTP id n15cs233769wfg;
+ Thu, 5 Feb 2009 12:02:09 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.143.28.12 with SMTP id f12mr461455wfj.302.1233864129328; Thu, 
+	05 Feb 2009 12:02:09 -0800 (PST)
+Date: Thu, 5 Feb 2009 12:02:09 -0800
+Message-ID: <1f9689a80902051202r6bb39ee7vf04cdea5c609e00c@mail.gmail.com>
+Subject: test
+From: Michael Murray <mdmurray@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=001636e910e521383104623161cb
+
+--001636e910e521383104623161cb
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+new on production
+
+--001636e910e521383104623161cb
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+new on production
+
+--001636e910e521383104623161cb--', '2009-02-05 20:02:43', NULL, 40, '2009-02-05 20:02:43')[0m
+Received email: 43
+  [4;36;1mEmail Create (0.5ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('MIME-Version: 1.0
+Received: by 10.142.215.15 with HTTP; Thu, 5 Feb 2009 12:21:37 -0800 (PST)
+Date: Thu, 5 Feb 2009 12:21:37 -0800
+Delivered-To: supporttrackr@gmail.com
+Message-ID: <35c02b870902051221j52cdc063u7d0452898d4f0ded@mail.gmail.com>
+Subject: test
+From: Support Test <supporttrackr@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd33000be2818046231a64e
+
+--000e0cd33000be2818046231a64e
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+it now
+
+--000e0cd33000be2818046231a64e
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+it now
+
+--000e0cd33000be2818046231a64e--', '2009-02-05 20:22:14', NULL, 43, '2009-02-05 20:22:14')[0m
+Received email: 44
+  [4;35;1mEmail Create (0.6ms)[0m   [0mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('MIME-Version: 1.0
+Received: by 10.142.215.15 with HTTP; Thu, 5 Feb 2009 12:25:29 -0800 (PST)
+Date: Thu, 5 Feb 2009 12:25:29 -0800
+Delivered-To: supporttrackr@gmail.com
+Message-ID: <35c02b870902051225m49c24836h69c60475822364de@mail.gmail.com>
+Subject: a third
+From: Support Test <supporttrackr@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd312fe94afdd046231b441
+
+--000e0cd312fe94afdd046231b441
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+in here
+
+--000e0cd312fe94afdd046231b441
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+in here
+
+--000e0cd312fe94afdd046231b441--', '2009-02-05 20:26:19', NULL, 44, '2009-02-05 20:26:19')[0m
+  [4;36;1mEmail Load (27.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Received email: 45
+  [4;36;1mEmail Create (0.6ms)[0m   [0;1mINSERT INTO "emails" ("message", "updated_at", "response_id", "uid", "created_at") VALUES('MIME-Version: 1.0
+Received: by 10.142.215.15 with HTTP; Thu, 5 Feb 2009 12:27:53 -0800 (PST)
+Date: Thu, 5 Feb 2009 12:27:53 -0800
+Delivered-To: supporttrackr@gmail.com
+Message-ID: <35c02b870902051227m17a4bb7bla47f5eef0c7110ca@mail.gmail.com>
+Subject: a 4th
+From: Support Test <supporttrackr@gmail.com>
+To: supporttrackr@gmail.com
+Content-Type: multipart/alternative; boundary=000e0cd1492e2b3461046231bd76
+
+--000e0cd1492e2b3461046231bd76
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+adf
+
+--000e0cd1492e2b3461046231bd76
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+adf
+
+--000e0cd1492e2b3461046231bd76--', '2009-02-05 20:28:22', NULL, 45, '2009-02-05 20:28:22')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m

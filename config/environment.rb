@@ -13,7 +13,7 @@ Rails::Initializer.run do |config|
 
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
-  #config.load_paths.unshift "#{RAILS_ROOT}/vendor/gems/RedCloth-4.1.1/ext/redcloth_scan"  
+  config.load_paths.unshift "#{RAILS_ROOT}/vendor/gems/RedCloth-4.1.1/ext/redcloth_scan"  
   config.load_paths += %W( #{RAILS_ROOT}/app/concerns )
   
   # Specify gems that this application depends on and have them installed with rake gems:install

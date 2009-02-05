@@ -30,7 +30,7 @@ after "deploy", "reload_nginx", "deploy:cleanup"
 namespace :deploy do  
   desc "Restart the thins"  
   task :restart do  
-    run "/etc/init.d/thin restart"  
+    sudo "/etc/init.d/thin restart"  
   end  
 end
 
