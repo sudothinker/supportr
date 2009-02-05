@@ -4,7 +4,7 @@ set :application, "supportr"
 set :scm, :git
 set :user, "mik"
 set :repository,  "git@github.com:sudothinker/supportr.git"
-set :branch, "origin/master"
+set :branch, "master"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
@@ -21,6 +21,7 @@ role :web, location
 role :db,  location, :primary => true
 
 set :deploy_via, :copy
+set :copy_cache, true
 set :runner, user
 
 after "deploy:symlink", "supportr_symlink_configs"
