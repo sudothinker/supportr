@@ -1,4 +1,4 @@
-RAILS_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+RAILS_ROOT = "/home/mik/www/supportr/current"
 
 God.watch do |w|
   # script that needs to be run to start, stop and restart
