@@ -9,9 +9,9 @@ God.watch do |w|
   w.name          = "mail-fetcher" 
   w.group         = "mail" 
   w.interval      = 60.seconds
-  w.start         = "#{script} start #{rails_env}" 
-  w.restart       = "#{script} restart #{rails_env}" 
-  w.stop          = "#{script} stop #{rails_env}" 
+  w.start         = "#{rails_env} #{script} start" 
+  w.restart       = "#{rails_env} #{script} restart" 
+  w.stop          = "#{rails_env} #{script} stop" 
   w.start_grace   = 20.seconds
   w.restart_grace = 20.seconds
   w.pid_file      = "#{RAILS_ROOT}/log/MailFetcherDaemon.pid" 
